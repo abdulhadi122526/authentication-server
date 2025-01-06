@@ -1,0 +1,45 @@
+models{
+    models define krna hai or usi me "pre" ka method laga kr wahi se bcrypt karwana hai,
+}
+
+
+registeredUser {
+    email password lena hai,
+    check krna hai user ne email pass type kia hai ya nahi,
+    check krna hai user already exist to nahi hai agar mojood hai to msg show karwana hai,
+    warna data save karwa kar user register karwana hai,
+}
+
+do function bnanay hen ganerate token or access token ka
+
+logginUser{
+    emaail pass lena hai,
+    condition lagani hai email pass pr,
+    email check karwana hai exist krta hai ya nahi,
+    agar exist karta hai to pass compare karwana hai sahi hai ya nahi,
+    refresh or access token ganerate karwana hai,
+    cookies me save krna hai,
+    successfully login ho gaya,
+}
+
+
+logoutUser{
+    refresh token ko clear krny se log out ho jaey ga 
+    clear k liye res.clearCookie hai
+}
+
+regenerate access token{
+    cookies se refresh token lena hai,
+    jwt se check krwana hai k token sahi hai ya nahi hai agar sahi nahi hai to messaga show karwana hai,
+    or agar tiken mil gaya to chk krna hai k us token se data me user mojood hai ya nahi hai agar nahi hai to msg show krwana hai,
+    wagarna access token ganerate karwana hai,
+    
+}
+
+
+protectedRoutes{
+    is k liye ek middleware ka use hoga,
+    sab se peh;lly user se access token lena hai
+    agar token nahi mila to msg show krwana hai or agar mil gaya to jwt se verify karwana hai,
+    agar error ho to invalid token ka msg dena hai or aga sahi ho to next() chlana hai
+}
