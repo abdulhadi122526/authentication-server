@@ -13,6 +13,8 @@ app.use("/api/v1", userRoutes);
 dotenv.config();
 app.get("/", (req, res) => {
   res.send("Hello World!");
+ 
+  
 });
 
 connecrDB()
