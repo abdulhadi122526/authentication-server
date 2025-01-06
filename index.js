@@ -8,9 +8,9 @@ const app = express();
 app.use(express.json());
 app.use(cookieParser());
 app.use("/api/v1", userRoutes);
-
-
 dotenv.config();
+
+
 app.get("/", (req, res) => {
   res.send("Hello World!");
  
